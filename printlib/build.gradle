@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.file('projectflavor/flavorable_print.gradle')
+
+android {
+    compileSdkVersion 26
+
+    publishNonDefault true
+    defaultPublishConfig "liandiRelease"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        //让32位编译的.so文件能运行在64位的手机上（前提代码支持64位）
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a", "serial_port", "ENCRYP"
+//        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
+
+
+}
+
+dependencies {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+    provided 'com.google.zxing:core:3.3.3'
+//    联迪设备
+    liandi_printApi files('libs/eptapilibrary.jar')
+//    肯麦思打印SDK
+    corewise_printApi files('libs/print_SDK.jar')
+    sibituo_printApi files('libs/regoPrintLibV3.0.05.jar')
+    zcs_printApi files('libs/POS2.8.0.180201_R.jar')
+    //优博讯打印和刷卡使用一个库，抽取放在pdalib中
+//    implementation project(':pdalib')
+    urovo_printCompileOnly files('libs/platform_sdk_v2.4.0810.jar')
+
+    u9300p_printApi files('libs/zypos1.5.jar')
+
+
+}

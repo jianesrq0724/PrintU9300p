@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Printlib</string>
+
+    <string name="printer_out_of_paper">打印纸已用完,请及时补充</string>
+</resources>

@@ -1,0 +1,48 @@
+android {
+
+    flavorDimensions "default"
+    productFlavors {
+
+        //世麦科技
+        shimai_print {
+
+        }
+
+        //联迪 p990 A8
+        liandi_print {
+
+        }
+
+        //肯麦思
+        corewise_print {
+
+        }
+
+        //优博讯  i9000
+        urovo_print {
+
+        }
+        //思必拓 kt50
+        sibituo_print {
+
+        }
+
+        //深圳中磁
+        zcs_print {
+
+        }
+
+        //1306
+        u9300p_print {
+
+        }
+
+        //只有分体机
+        other {
+
+        }
+
+
+    }
+
+}

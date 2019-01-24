@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PrintU9300p.iml" filepath="$PROJECT_DIR$/PrintU9300p.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/printlib/printlib.iml" filepath="$PROJECT_DIR$/printlib/printlib.iml" />
     </modules>
   </component>
 </project>
